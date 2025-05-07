@@ -6,14 +6,14 @@ function Home() {
     return save ? JSON.parse(save) : [];
   });
 
-  const [value, setvalue] = useState("");
+  const [value, setvalue] = useState("")
 
   useEffect(() => {
     localStorage.setItem("add", JSON.stringify(add));
   }, [add]);
+  
+  
 
-  
-  
   const handleadd = () => {
     if (value.trim()) {
       setadd((prev) => [...prev, value]);
